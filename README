@@ -1,0 +1,30 @@
+Yet another reboot of dasEngine.
+
+I am now using CMake for the build system for the libraries. This allows me
+to build them for Visual C++ as well as the GNU compilers.
+
+I have included the Android.cmake which goes in the Modules/Platform directory
+of the CMake install. The Android_tc.cmake file is the toolchain file which
+I can use to customize the options for dasEngine.
+
+There is a cmake directory in each library that contains the bootstrap
+script file to generate the initial Makefiles. The .gitignore is set up to
+allow the build results to go there too.
+
+dasEngine is based on the OGRE 3D renderer (which includes dependencies for
+freetype, freeimage, and others).
+
+OIS is used for the input system. It includes here the iPhone Multitouch patch
+extended for Android as well, including the Accelerometer.
+
+OpenAL is used for audio. This includes two ports: the OpenAL Soft library for
+Windows and Linux. It'll also include an OpenAL implementation for Android
+that is built from scratch (and no where near fully compliant).
+
+Bullet Physics is used for the physics engine.
+
+The dasEngine library brings it all together.
+
+Eventually scripts for Blender will be included that support creating objects
+and levels and exporting them into resource files that can be loaded into the
+engine.
