@@ -4,6 +4,10 @@ include_directories(include cmake builds/unix)
 
 add_definitions(-DFT_CONFIG_CONFIG_H=<ftconfig.h> -DFT2_BUILD_LIBRARY)
 
+if(DASENGINE_32)
+add_definitions(-m32)
+endif(DASENGINE_32)
+
 set(SOURCES
 	src/base/ftbase.c
 	src/base/ftbbox.c
