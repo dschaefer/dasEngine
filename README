@@ -32,4 +32,5 @@ engine.
 The current versions of external libraries are:
 - freetype 2.4.1
 - freeimage 3.13.1
+- zlib 1.2.5
 - ogre latest in hg
