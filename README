@@ -28,3 +28,8 @@ The dasEngine library brings it all together.
 Eventually scripts for Blender will be included that support creating objects
 and levels and exporting them into resource files that can be loaded into the
 engine.
+
+The current versions of external libraries are:
+- freetype 2.4.1
+- freeimage 3.13.1
+- ogre latest in hg

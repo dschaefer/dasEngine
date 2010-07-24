@@ -1,0 +1,17 @@
+#version 100
+
+precision highp float;
+precision highp int;
+precision lowp sampler2D;
+precision lowp samplerCube;
+
+uniform sampler2D RT;
+uniform sampler2D NormalMap;
+uniform vec2 iTexCoord;
+
+void main()
+{
+	vec4 normal = 2.0 * (texture2D(NormalMap, iTexCoord * 2.5) - 0.5);
+
+	gl_FragColor =  texture2D(RT, iTexCoord + normal.xy * 0.05);
+}

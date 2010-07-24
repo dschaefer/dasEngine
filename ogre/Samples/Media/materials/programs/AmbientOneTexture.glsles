@@ -1,0 +1,22 @@
+#version 100
+
+precision highp float;
+precision highp int;
+precision lowp sampler2D;
+precision lowp samplerCube;
+
+uniform vec4 ambient;
+uniform mat4 worldViewProj;
+
+attribute vec4 position;
+
+varying vec4 colour;
+
+/*
+  Basic ambient lighting vertex program for GLSL ES
+*/
+void main()
+{
+	gl_Position = position;
+	colour = ambient;
+}
