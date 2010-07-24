@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-include_directories(include cmake builds/unix)
+include_directories(include . builds/unix)
 
 add_definitions(-DFT_CONFIG_CONFIG_H=<ftconfig.h> -DFT2_BUILD_LIBRARY)
 
@@ -58,4 +58,4 @@ if(WIN32)
 set(SOURCES ${SOURCES} builds/win32/ftdebug.c)
 endif(WIN32)
 
-add_library(ft2 ${SOURCES})
+add_library(freetype ${SOURCES})

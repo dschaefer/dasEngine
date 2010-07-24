@@ -239,24 +239,6 @@ set(SOURCES
 	Source/ZLib/trees.c
 	Source/ZLib/uncompr.c
 	Source/ZLib/zutil.c
-	Source/LibOpenJPEG/bio.c
-	Source/LibOpenJPEG/cio.c
-	Source/LibOpenJPEG/dwt.c
-	Source/LibOpenJPEG/event.c
-	Source/LibOpenJPEG/image.c
-	Source/LibOpenJPEG/j2k.c
-	Source/LibOpenJPEG/j2k_lib.c
-	Source/LibOpenJPEG/jp2.c
-	Source/LibOpenJPEG/jpt.c
-	Source/LibOpenJPEG/mct.c
-	Source/LibOpenJPEG/mqc.c
-	Source/LibOpenJPEG/openjpeg.c
-	Source/LibOpenJPEG/pi.c
-	Source/LibOpenJPEG/raw.c
-	Source/LibOpenJPEG/t1.c
-	Source/LibOpenJPEG/t2.c
-	Source/LibOpenJPEG/tcd.c
-	Source/LibOpenJPEG/tgt.c
 	Source/OpenEXR/./IlmImf/ImfAttribute.cpp
 	Source/OpenEXR/./IlmImf/ImfB44Compressor.cpp
 	Source/OpenEXR/./IlmImf/ImfBoxAttribute.cpp
@@ -335,3 +317,24 @@ set(SOURCES
 	)
 
 add_library(freeimage ${SOURCES})
+
+set(IGNORED_SOURCES
+	Source/LibOpenJPEG/bio.c
+	Source/LibOpenJPEG/cio.c
+	Source/LibOpenJPEG/dwt.c
+	Source/LibOpenJPEG/event.c
+	Source/LibOpenJPEG/image.c
+	Source/LibOpenJPEG/j2k.c
+	Source/LibOpenJPEG/j2k_lib.c
+	Source/LibOpenJPEG/jp2.c
+	Source/LibOpenJPEG/jpt.c
+	Source/LibOpenJPEG/mct.c
+	Source/LibOpenJPEG/mqc.c
+	Source/LibOpenJPEG/openjpeg.c
+	Source/LibOpenJPEG/pi.c
+	Source/LibOpenJPEG/raw.c
+	Source/LibOpenJPEG/t1.c
+	Source/LibOpenJPEG/t2.c
+	Source/LibOpenJPEG/tcd.c
+	Source/LibOpenJPEG/tgt.c
+	)
