@@ -1,7 +1,2 @@
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
-*.a
-*.lib
-*.pdb
+/*/*
+!/*/runcmake.sh
