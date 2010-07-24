@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-include_directories(include . builds/unix)
+include_directories(include dasbuild builds/unix)
 
 add_definitions(-DFT_CONFIG_CONFIG_H=<ftconfig.h> -DFT2_BUILD_LIBRARY)
 
@@ -59,10 +59,3 @@ set(DAS_SOURCES ${DAS_SOURCES} builds/win32/ftdebug.c)
 endif(WIN32)
 
 add_library(freetype ${DAS_SOURCES})
-
-set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/../..)
-
-install(TARGETS freetype
-	ARCHIVE DESTINATION lib)
-
-install(DIRECTORY include/ DESTINATION include)
