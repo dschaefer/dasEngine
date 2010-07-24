@@ -4,4 +4,6 @@ cmake ../.. \
     -DFreeImage_INC_SEARCH_PATH=$PWD/../../../freeimage/Source \
     -DFreeImage_LIB_SEARCH_PATH=$PWD/../../../freeimage/dasbuild/msvc \
     -DZLIB_INC_SEARCH_PATH=$PWD/../../../zlib \
-    -DZLIB_LIB_SEARCH_PATH=$PWD/../../../zlib/dasbuild/msvc
+    -DZLIB_LIB_SEARCH_PATH=$PWD/../../../zlib/dasbuild/msvc \
+    -DZZip_INC_SEARCH_PATH=$PWD/../../../zziplib \
+    -DZZip_LIB_SEARCH_PATH=$PWD/../../../zziplib/dasbuild/msvc
