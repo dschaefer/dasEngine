@@ -4,11 +4,11 @@ include_directories(include . builds/unix)
 
 add_definitions(-DFT_CONFIG_CONFIG_H=<ftconfig.h> -DFT2_BUILD_LIBRARY)
 
-if(DASENGINE_32)
+if(DAS_ENGINE_32)
 add_definitions(-m32)
-endif(DASENGINE_32)
+endif(DAS_ENGINE_32)
 
-set(SOURCES
+set(DAS_SOURCES
 	src/base/ftbase.c
 	src/base/ftbbox.c
 	src/base/ftbitmap.c
@@ -51,11 +51,18 @@ set(SOURCES
 	)
 
 if(UNIX)
-set(SOURCES ${SOURCES} src/base/ftdebug.c)
+set(DAS_SOURCES ${DAS_SOURCES} src/base/ftdebug.c)
 endif(UNIX)
 
 if(WIN32)
-set(SOURCES ${SOURCES} builds/win32/ftdebug.c)
+set(DAS_SOURCES ${DAS_SOURCES} builds/win32/ftdebug.c)
 endif(WIN32)
 
-add_library(freetype ${SOURCES})
+add_library(freetype ${DAS_SOURCES})
+
+set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+
+install(TARGETS freetype
+	ARCHIVE DESTINATION lib)
+
+install(DIRECTORY include/ DESTINATION include)
