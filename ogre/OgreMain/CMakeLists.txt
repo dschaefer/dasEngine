@@ -258,6 +258,7 @@ set (HEADER_FILES
 )
 
 set (SOURCE_FILES
+  src/OgrePrecompiledHeaders.cpp
   src/OgreAlignedAllocator.cpp
   src/OgreAnimable.cpp
   src/OgreAnimation.cpp
@@ -371,7 +372,6 @@ set (SOURCE_FILES
   src/OgrePlatformInformation.cpp
   src/OgrePolygon.cpp
   src/OgrePose.cpp
-  src/OgrePrecompiledHeaders.cpp
   src/OgrePredefinedControllers.cpp
   src/OgrePrefabFactory.cpp
   src/OgreProfiler.cpp

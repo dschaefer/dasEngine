@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-add_definitions(-DFREEIMAGE_LIB)
+add_definitions(-DFREEIMAGE_LIB -DLIBRAW_NODLL)
 
 include_directories(
 	.
@@ -46,8 +46,6 @@ set(SOURCES
 	Source/FreeImage/PluginHDR.cpp
 	Source/FreeImage/PluginICO.cpp
 	Source/FreeImage/PluginIFF.cpp
-	Source/FreeImage/PluginJ2K.cpp
-	Source/FreeImage/PluginJP2.cpp
 	Source/FreeImage/PluginJPEG.cpp
 	Source/FreeImage/PluginKOALA.cpp
 	Source/FreeImage/PluginMNG.cpp
@@ -337,4 +335,6 @@ set(IGNORED_SOURCES
 	Source/LibOpenJPEG/t2.c
 	Source/LibOpenJPEG/tcd.c
 	Source/LibOpenJPEG/tgt.c
+	Source/FreeImage/PluginJP2.cpp
+	Source/FreeImage/PluginJ2K.cpp
 	)
