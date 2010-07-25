@@ -34,4 +34,5 @@ The current versions of external libraries are:
 - freeimage 3.13.1
 - zlib 1.2.5
 - zziplib 0.13.59
+- ois 1.2.0
 - ogre latest in hg
