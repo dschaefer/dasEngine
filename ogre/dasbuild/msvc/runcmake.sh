@@ -8,4 +8,4 @@ cmake ../.. \
     -DZZip_INC_SEARCH_PATH=$PWD/../../../zziplib \
     -DZZip_LIB_SEARCH_PATH=$PWD/../../../zziplib/dasbuild/msvc \
     -DOIS_INC_SEARCH_PATH=$PWD/../../../ois/includes \
-    -DOIS_LIB_SEARCH_PATH=$PWD/../../../ois/dasbuild/
+    -DOIS_LIB_SEARCH_PATH=$PWD/../../../ois/dasbuild/msvc
